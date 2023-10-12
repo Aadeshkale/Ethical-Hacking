@@ -1,0 +1,27 @@
+To get information about a domain example,
+dirs,files,subdomain,technologies,vulnerabilities
+
+------------------------------------------------------
+Way 1
+use online search engines ex,google, duckduckgo
+site: infosys
+site: infosys file: pdf,docs,xls
+-------------------------------------------------------
+Way 2
+Using tool 
+Online site netcraft
+Browser extension :wappalyzer
+------------------------------------------------------------------------------------------
+Way 3 
+Linux tools 
+1) subfinder :- find all subdomain (https://www.geeksforgeeks.org/subfinder-tool-in-linux/)
+./subfinder -d persistent.com  -active -oI op.txt
+
+2) dirb
+dirb http://172.16.161.129 -o res.txt
+
+3) discover
+./discover.sh
+
+4) zap-proxy tool linux
+------------------------------------------------------------------------------------------

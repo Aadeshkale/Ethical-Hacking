@@ -1,0 +1,9 @@
+----------------------------------------------
+way 1
+use tool seeker
+start tool : python3 seeker.py
+Based on choices select 1
+After starting server use cloudflared or other tool
+to make localhost server accessable over WAN
+Share link and see location in logs
+-----------------------------------------------

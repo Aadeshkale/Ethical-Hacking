@@ -1,0 +1,4 @@
+use tools 
+evilgrade -> update server with expiot payload
+
+bettercap(man in middle) -> dns spoof for evilgrade server

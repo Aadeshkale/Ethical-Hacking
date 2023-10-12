@@ -1,0 +1,76 @@
+Change your MAC address 
+
+way 1
+use macchanger tool
+sudo macchanger -r wlp6s0
+
+way 2
+use "ip link set dev" command
+sudo ip link set dev wlp6s0 down
+sudo ip link set dev wlp6s0 address 00:1F:5D:22:65:45
+sudo ip link set dev wlp6s0 up
+ip link show wlp6s0
+
+way 3 
+use ifconfig
+ifconfig wlp6s0 down
+ifconfig wlp6s0 hw ether 00:1F:5D:22:65:45
+
+# for Permanent change
+echo ". macchanger -r wlp6s0 " >> ~/.bashrc
+or use crontab tool
+------------------------------------------------------------------------------------
+site to find your ip:- https://api.ipify.org/
+
+
+Way 1
+
+use tTool proxychains4
+open Open and edit file /etc/proxychains4.conf 
+uncomuncomment dynamic_chain 
+commecommentnt strict_chain
+set uset proxy list in /etc/proxychains4.conf
+
+exampexample,
+
+soc  
+socks4  145.239.85.58   9300    
+socks5  46.4.96.137     1080    
+socks5  47.91.88.100    1080    
+socks5  82.196.11.105   1080
+socks5  188.226.141.127 1080
+socks5  185.153.198.226 32498
+
+note note :- it will not support https
+----------------------------------------------------------------------------------
+
+Way 2
+Useing tor 
+
+Torifying shell
+use "source torsocks on" cmd in shell to make your shell cmds go through tor
+use "source torsocks off" to off torsocket for shell
+# for Permanent change
+echo ". torsocks on" >> ~/.bashrc
+
+Torifying Brawoser
+Goto Brawoser settings and set proxy to tor socket
+127.0.0.1 9050
+
+-----------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

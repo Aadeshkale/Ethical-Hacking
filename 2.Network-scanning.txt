@@ -1,0 +1,13 @@
+Scaning of open ports, services, os information on host/domain/ip
+
+way 1
+Use nmap
+
+nmap -v -sU -sT -p0-65353 172.161.16.129
+By passing firewall
+nmap -v -sS  -p0-65353 172.161.16.129
+
+-----------------------------------------------------------------------------
+way 2
+Use masscan
+-----------------------------------------------------------------------------

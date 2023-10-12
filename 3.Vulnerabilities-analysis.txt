@@ -1,0 +1,18 @@
+Way 1 
+Use nmap service and version scanning use expoite DB
+linux tool : searchsploit openssh 4
+goolde : exploite DB
+------------------------------------------------------
+Way 2 
+Use uniscan tool
+uniscan -u 172.16.161.129
+uniscan-gui
+------------------------------------------------------
+way 3
+Use metaspolite
+msfconsole
+db_nmap -sV -A -p0-65535 172.16.161.129
+------------------------------------------------------
+way 4 
+Use tool openvas
+------------------------------------------------------
